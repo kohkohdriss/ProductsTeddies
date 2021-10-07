@@ -1,5 +1,5 @@
 const order = JSON.parse(localStorage.getItem("order")) || [];
-const totalLs = localStorage.getItem("total") ;
+const totalLs = localStorage.getItem("total");
 console.log("order");
 console.log(order);
 
@@ -9,10 +9,9 @@ let orderId = document.querySelector(".orderId");
 let email = document.querySelector(".email");
 let address = document.querySelector(".address");
 
-
 name.innerHTML = order.contact.firstName + ` ` + order.contact.lastName;
 
-total.innerHTML = totalLs +" €";
+total.innerHTML = totalLs + " €";
 orderId.innerHTML = order.orderId;
 email.innerHTML = order.contact.email;
 address.innerHTML = order.contact.address + " " + order.contact.city;

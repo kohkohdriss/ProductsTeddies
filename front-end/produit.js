@@ -47,55 +47,48 @@ function addToCart() {
     let item = {
       title: productTitle.innerHTML,
       price: parseFloat(productPrice.innerHTML),
-      img : productImg.src,
+      img: productImg.src,
       quantity: parseInt(document.getElementById("quantity").value),
       _id: id,
     }; //console.log("item" );
     //console.log( item);
-    isAlreadyPresent= false;
+    isAlreadyPresent = false;
     let indexModification;
 
     for (products of arrayCart) {
       switch (products._id) {
-          case item._id:
-              isAlreadyPresent = true;
-              indexModification = arrayCart.indexOf(products);
-      }
-  }
-
-
-   if (isAlreadyPresent) {
-    for (var i = 0; i < arrayCart.length; i++) {
-      if (arrayCart[i]._id === item._id) {
-        arrayCart[i].quantity += item.quantity;
-        localStorage.setItem("items", JSON.stringify(arrayCart));
+        case item._id:
+          isAlreadyPresent = true;
+          indexModification = arrayCart.indexOf(products);
       }
     }
-  }else {
-    arrayCart.push(item);
-    localStorage.setItem("items", JSON.stringify(arrayCart));
-  }
-  alertCart.setAttribute("style" , "visibility : visible" )
+
+    if (isAlreadyPresent) {
+      for (var i = 0; i < arrayCart.length; i++) {
+        if (arrayCart[i]._id === item._id) {
+          arrayCart[i].quantity += item.quantity;
+          localStorage.setItem("items", JSON.stringify(arrayCart));
+        }
+      }
+    } else {
+      arrayCart.push(item);
+      localStorage.setItem("items", JSON.stringify(arrayCart));
+    }
+    alertCart.setAttribute("style", "visibility : visible");
   });
-
-  
-
-
 }
 
 function deleteItems() {
-  emptyCart.addEventListener("click", function() {
-
-    if ( confirm( "Vider le panier ? " ) ) {
+  emptyCart.addEventListener("click", function () {
+    if (confirm("Vider le panier ? ")) {
       // Code à éxécuter si le l'utilisateur clique sur "OK"
       localStorage.clear();
-      alert("le panier est vide")
-
-  } else {
-      // Code à éxécuter si l'utilisateur clique sur "Annuler" 
-      alert("Encore des produits dans le panier")
-  }
-  alertCart.setAttribute("style" , "visibility : hidden" )
+      alert("le panier est vide");
+    } else {
+      // Code à éxécuter si l'utilisateur clique sur "Annuler"
+      alert("Encore des produits dans le panier");
+    }
+    alertCart.setAttribute("style", "visibility : hidden");
   });
 }
 
