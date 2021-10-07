@@ -1,0 +1,66 @@
+.Accueil {
+    position: absolute;
+    left: -5rem;
+    bottom: 1rem;
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(255, 255, 241);
+    background-size: cover;
+}
+
+title {
+    color: brown;
+    font-weight: bold;
+}
+
+.descriptionIndex {
+    background-color: rgb(253, 225, 189);
+    color: rgb(243, 169, 8);
+}
+
+.title_teddies {
+    color: rgba(199, 147, 15, 0.802);
+}
+
+a:visited {
+    color: rgb(175, 105, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(230, 111, 0);
+}
+
+.imgProduct {
+    width: 100%;
+    height: 100%;
+}
+
+.btnAcheter {
+    background-color: rgb(253, 225, 189);
+    color: rgb(54, 52, 52);
+    border-color: rgb(228, 120, 32);
+}
+
+footer {
+    margin-top: 60px;
+    background-color: rgb(253, 225, 189);
+}
+
+
+
+.productCart{
+
+height: 50px;
+align-content: center;
+justify-content: center;
+}
+
+.alertCart{
+    margin: 2%;
+    visibility: collapse;
+   
+}
