@@ -4,7 +4,7 @@
     bottom: 0.2rem;
     font-size: 1.2em;
     font-weight: 700;
-    font-family:  'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -12,24 +12,23 @@ body {
     background-size: cover;
 }
 
-.title_H1{
-    font-size: 3rem ;
+.title_H1 {
+    font-size: 3rem;
     top: 90px;
     font-weight: bold;
-    font-family:  'Courier New', Courier, monospace
-
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.img_cart{
+.img_cart {
     width: 45px;
     height: 45px;
-    margin-bottom:-38px;
+    margin-bottom: -38px;
 }
 
 .descriptionIndex {
     background-color: rgb(253, 225, 189);
     color: rgb(151, 104, 2);
-    
+
 }
 
 .title_teddies {
@@ -64,51 +63,56 @@ footer {
 
 
 
-.productCart{
+.productCart {
 
-height: 50px;
-align-content: center;
-justify-content: center;
+    height: 50px;
+    align-content: center;
+    justify-content: center;
 }
 
-.alertCart{
+.alertCart {
     margin: 2%;
     visibility: collapse;
-   
-}
-.remerciement_Confirmation{
-    font-weight: 500;
-}
-.title_index{
-    font-size: 26px;
-    
+
 }
 
-@media all and (max-device-width: 480px)
-{
+.remerciement_Confirmation {
+    font-weight: 500;
+}
+
+.title_index {
+    font-size: 26px;
+
+}
+
+@media all and (max-width: 480px) {
     /* Vos règles CSS pour les mobiles ici */
 
     .title_H1 {
-        font-size:1.8em;
-    }
-    .Accueil{
-        font-size: 1em;
-        padding-left: 25px; 
-        margin-bottom: -18px;
-    }
-    .title_confirmation{
-        margin-left: -18px;        
+        font-size: 1.8em;
     }
 
-    .img_cart{
+    .Accueil {
+        font-size: 1em;
+        padding-left: 25px;
+        margin-bottom: -18px;
+    }
+
+    .title_confirmation {
+        margin-left: -18px;
+    }
+
+    .img_cart {
         width: 35px;
         height: 35px;
     }
-    .confirmation_title{
+
+    .confirmation_title {
         font-size: medium;
     }
-   .confiramtion_coordonnees{
-       font-size: 12px;
-   }
+
+    .confiramtion_coordonnees {
+        font-size: 12px;
+    }
 
 }
