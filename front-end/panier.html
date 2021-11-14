@@ -12,48 +12,41 @@
     />
     <link rel="stylesheet" href="style.css" />
     <!-- Favicon -->
-    <link
-      rel="icon"
-      href="https://img.icons8.com/color-glass/48/000000/teddy-bear.png"
-    />
+    <link rel="icon" href="https://img.icons8.com/color-glass/48/000000/teddy-bear.png" />
     <title>Teddy</title>
   </head>
- <!--Body-->
- <body>
-  <header class="container d-flex justify-content-between mb-4 mt-4">
-    <h1 class="title_H1  title_teddies"><a href="index.html">ORINOCO</a></h1>
-    <div class="d-flex position-relative">
-      <div class="Accueil  ">
-        <a href="index.html">Accueil</a>
+  <!--Body-->
+  <body>
+    <header class="container d-flex justify-content-between mb-4 mt-4">
+      <h1 class="title_H1 title_teddies"><a href="index.html">ORINOCO</a></h1>
+      <div class="d-flex position-relative">
+        <div class="Accueil">
+          <a href="index.html">Accueil</a>
+        </div>
+        <a href="panier.html"><img class="img_cart" src="images/cart_icon.png" alt="cart" /></a>
       </div>
-      <a href="panier.html"
-        ><img class="img_cart" src="images/cart_icon.png"  alt="cart"
-      /></a>
-    </div>
-  </header>
+    </header>
     <!--Main-->
     <main class="card">
       <!-- Description -->
-      </main>
-
       <div class="container card">
         <div>
           <div class="mb-4 mt-3 h4">Votre panier</div>
         </div>
         <div class="d-flex justify-content-between">
-          <div class=" mb-2 d-flex flex-column">
-            <div class="h6 mb-3  ">Produit</div>
-            <div class="productTitle  " ></div>
+          <div class="mb-2 d-flex flex-column">
+            <div class="h6 mb-3">Produit</div>
+            <div class="productTitle"></div>
           </div>
-          <div class=" mb-2 ">
-            <div class="h6 mb-3 ">Image</div>
-             <div class="productImg text-center " ></div>
+          <div class="mb-2">
+            <div class="h6 mb-3">Image</div>
+            <div class="productImg text-center"></div>
           </div>
-          <div class=" mb-2">
+          <div class="mb-2">
             <div class="h6 mb-3">Prix</div>
-            <div class="productPrice text-center "></div>
+            <div class="productPrice text-center"></div>
           </div>
-          <div class=" mb-2">
+          <div class="mb-2">
             <div class="h6 mb-3">Quantité</div>
             <div class="productQuantity text-center"></div>
           </div>
@@ -63,7 +56,9 @@
         <pre class="h6 mt-2">Total : </pre>
         <span class="mt-2 productTotal"></span>
       </div>
-      
+      <div class="container d-flex flex-row h5 mt-2">
+        <button class="bg-warning addToCartBtn text-wrap mt-1 emptyCart">Vider Panier</button>
+      </div>
 
       <!--Formulaire de contact-->
       <div class="container card mt-4">
@@ -103,9 +98,7 @@
                 placeholder="email@mail.com"
                 required
               />
-              <div class="invalid-feedback">
-                Svp, Entrez une adresse email valide.
-              </div>
+              <div class="invalid-feedback">Svp, Entrez une adresse email valide.</div>
             </div>
           </div>
           <div class="h5">Adresse de facturation</div>
@@ -119,9 +112,7 @@
                 placeholder="adresse"
                 required
               />
-              <div class="invalid-feedback">
-                Svp, Entrez une adresse valide.
-              </div>
+              <div class="invalid-feedback">Svp, Entrez une adresse valide.</div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustom03">Ville</label>
@@ -142,25 +133,21 @@
                 type="checkbox"
                 value=""
                 id="invalidCheck"
-                required
+                required="required"
               />
               <label class="form-check-label" for="invalidCheck">
                 Accepter Les conditions d'utilisation (CGU)
               </label>
-              <div class="invalid-feedback">
-                Vous avez accepté les conditions d'utilisation.
-              </div>
+              <div class="invalid-feedback">Vous avez accepté les conditions d'utilisation.</div>
             </div>
           </div>
-          <button class="btn btn-primary submit mb-2" id="order" type="submit">
-            Commander
-          </button>
+          <button class="btn btn-primary submit mb-2" id="order" type="submit">Commander</button>
         </form>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class=" py-2">
+    <footer class="py-2">
       <ul class="list-inline text-center">
         <li class="list-inline-item">
           <a href="index.html" title="Accueil">Accueil</a>
@@ -192,6 +179,7 @@
     ></script>
 
     <!--Script-->
+    <script src="fonctions.js"></script>
     <script src="panier.js"></script>
   </body>
 </html>
