@@ -5,10 +5,10 @@ function getTeddies() {
       alert("Error of connection to the server");
     })
     .then((teddies) => {
-      console.log("data", teddies);
+     // console.log("data", teddies);
       let output = "";
       teddies.forEach(function (teddy) {
-        console.log("item", teddy);
+        //console.log("item", teddy);
         output += `
           <div class="card card-body mb-3  col-12 col-md-4   ">
             <img class="imgProduct" src="${teddy.imageUrl}" alt="${

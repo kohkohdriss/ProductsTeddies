@@ -9,12 +9,9 @@ const checkBox = document.getElementById("invalidCheck");
 //recuperation des données des local storage
 var lsProduct = localStorage.getItem("items");
 let productObjet = JSON.parse(lsProduct);
-console.log("productobjet");
-console.log(productObjet);
 //affichage des données dans le panier, calcaul le total et la création de total dans le local storage
 let total = 0;
 for (let i = 0; i < productObjet.length; i++) {
-  console.log(productObjet[i]);
   productTitle.innerHTML += `<div class="productCart"> ${productObjet[i].title}</div>`;
   productImg.innerHTML += `<div class="productCart"> <a href="produit.html?_id=${productObjet[i]._id}"><img src="${productObjet[i].img}" alt="" width=50px></a></div> `;
   productPrice.innerHTML += `<div class="productCart"> ${productObjet[i].price} €</div>`;
