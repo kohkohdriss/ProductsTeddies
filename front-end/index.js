@@ -1,11 +1,19 @@
+let myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
+var myHeaders = new Headers();
+
 function getTeddies() {
-  fetch("http://localhost:3000/api/teddies")
+  fetch("http://localhost:3000/api/teddies", myInit)
     .then((res) => res.json())
     .catch((error) => {
       alert("Error of connection to the server");
     })
     .then((teddies) => {
-     // console.log("data", teddies);
+      // console.log("data", teddies);
       let output = "";
       teddies.forEach(function (teddy) {
         //console.log("item", teddy);

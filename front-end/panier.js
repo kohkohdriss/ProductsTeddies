@@ -9,7 +9,7 @@ const checkBox = document.getElementById("invalidCheck");
 //recuperation des données des local storage
 var lsProduct = localStorage.getItem("items");
 let productObjet = JSON.parse(lsProduct);
-//affichage des données dans le panier, calcaul le total et la création de total dans le local storage
+//affichage des données dans le panier, calcaul du total et sa création dans le local storage
 let total = 0;
 for (let i = 0; i < productObjet.length; i++) {
   productTitle.innerHTML += `<div class="productCart"> ${productObjet[i].title}</div>`;
@@ -22,7 +22,8 @@ productTotal.innerHTML = total + ` €`;
 localStorage.setItem("total", total);
 //validation du formulaire
 const regexName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
-const regexCity = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
+const regexCity =
+  /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
 const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
 const regexAddress = /^[a-zA-Z0-9\s,'-]*$/;
 //préparation du formulaire contact et savalidation plus les produits achetés et les envoyés vers le local storage
@@ -36,14 +37,7 @@ order.addEventListener("click", (event) => {
     email: document.querySelector(".email").value,
   };
   // on valide que le formulaire soit correctement rempli
-  if (
-    (regexMail.test(contact.email) == true) &
-    (regexName.test(contact.firstName) == true) &
-    (regexName.test(contact.lastName) == true) &
-    (regexCity.test(contact.city) == true) &
-    (regexAddress.test(contact.address) == true) &
-    (checkBox.checked == true)
-  ) {
+  if (1 == 1) {
     event.preventDefault();
     let products = [];
     for (item of productObjet) {
@@ -52,7 +46,7 @@ order.addEventListener("click", (event) => {
       }
     }
     // on envoie en POST
-    fetch("https://teddies-api.herokuapp.com/api/teddies/order", {
+    fetch("http://localhost:3000/api/teddies/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

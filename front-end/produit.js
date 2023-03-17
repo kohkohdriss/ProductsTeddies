@@ -1,5 +1,6 @@
-let params = new URL(document.location).searchParams;
-let id = params.get("_id");
+// let params = new URL(document.location).searchParams;
+// let id = params.get("_id");
+let id = new URL(document.location).search.split("=")[1];
 //Variables Globales
 const arrayCart = JSON.parse(localStorage.getItem("items")) || [];
 const productImg = document.querySelector(".img");
